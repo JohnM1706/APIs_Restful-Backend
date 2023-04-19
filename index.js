@@ -17,6 +17,12 @@ app.use(cors());
 app.use(express.json());
 
 //crear rutas
+const rutas_articulo = require("./rutas/articulo"); 
+
+// cargar las rutas
+app.use("/api",rutas_articulo);
+
+// rutas de pruebas
 app.get("/probando",(req,res)=>{
 
     console.log("se ha ejecutado elenpoint probando ");
