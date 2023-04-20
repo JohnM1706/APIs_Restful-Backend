@@ -14,7 +14,8 @@ const puerto=3900;
 app.use(cors());
 
 //converir body en objeto JS
-app.use(express.json());
+app.use(express.json());//recibir datos con content-type app/json
+app.use(express.urlencoded({extended:true}));//recibiendo datos de from-urlencoded
 
 //crear rutas
 const rutas_articulo = require("./rutas/articulo"); 
